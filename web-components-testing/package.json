@@ -4,7 +4,6 @@
   "description": "Minimal example of end-to-end testing of Web Components",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "dev": "nodemon start-local-server.js"
   },
   "repository": {
@@ -18,6 +17,7 @@
   },
   "homepage": "https://github.com/bdelacretaz/web-platform-experiments#readme",
   "dependencies": {
+    "@playwright/test": "^1.27.0",
     "node-static": "^0.7.11"
   },
   "devDependencies": {

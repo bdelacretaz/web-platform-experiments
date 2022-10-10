@@ -1,6 +1,8 @@
 // This is mdn example code
 // from https://github.com/mdn/web-components-examples/blob/main/expanding-list-web-component/main.js
 
+console.log('Starting to define expanding-list');
+
 // Create a class for the element
 class ExpandingList extends HTMLUListElement {
   constructor() {
@@ -64,3 +66,4 @@ class ExpandingList extends HTMLUListElement {
 
 // Define the new element
 customElements.define('expanding-list', ExpandingList, { extends: 'ul' });
+console.log('Defined expanding-list');
