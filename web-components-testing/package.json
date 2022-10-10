@@ -1,0 +1,26 @@
+{
+  "name": "web-components-testing",
+  "version": "1.0.0",
+  "description": "Minimal example of end-to-end testing of Web Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon start-local-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdelacretaz/web-platform-experiments.git"
+  },
+  "author": "bdelacretaz@apache.org",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bdelacretaz/web-platform-experiments/issues"
+  },
+  "homepage": "https://github.com/bdelacretaz/web-platform-experiments#readme",
+  "dependencies": {
+    "node-static": "^0.7.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
