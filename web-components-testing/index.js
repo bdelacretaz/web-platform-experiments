@@ -1,10 +1,21 @@
+const { Server } = require('node-static');
+const http = require('http');
+
 // Minimal HTTP server
 const serverPort = 30303;
-const staticDir = `${__dirname}/static`;
 
 console.log(`Starting server on port ${serverPort}`);
 
-const fileServer = new(require('node-static').Server)(staticDir);
-require('http').createServer(function (req, res) {
-  fileServer.serve(req, res);
+const staticFiles = new Server(`${__dirname}/static`);
+const allFiles = new Server(__dirname);
+
+// Serve from static folder first, else everything (to serve node_modules)
+http.createServer((request, response) => {
+  request.addListener('end', function () {
+    staticFiles.serve(request, response, (e, _res) => {
+      if (e && (e.status === 404)) {
+        allFiles.serve(request, response);
+      }
+    });
+  }).resume();
 }).listen(serverPort);
