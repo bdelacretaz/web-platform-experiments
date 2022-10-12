@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 test('homepage expanding UK list', async ({ page }) => {
   // TODO start the server here
-  await page.goto('http://localhost:30303/');
+  await page.goto('http://localhost:30303/expanding-list.html');
 
   // Expect a title to contain a substring
   await expect(page).toHaveTitle(/web components example/i);
