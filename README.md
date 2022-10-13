@@ -1,2 +1,2 @@
 # web-platform-experiments
-Experimenting around various Web Platform topics
+Experimenting around various Web Platform topics.
